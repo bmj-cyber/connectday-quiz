@@ -23,7 +23,6 @@
   button,input,textarea,select{font-family:var(--sans)}
   button{cursor:pointer;border:0}
   button:disabled{cursor:default}
-
   /* ---------- BACKGROUND : brand blue gradient ---------- */
   .bg{position:fixed;inset:0;z-index:-2;overflow:hidden;
     background:
@@ -35,7 +34,6 @@
   .bg::before,.bg::after{content:"";position:absolute;inset:-40%;pointer-events:none}
   .bg::before{background:linear-gradient(180deg,transparent 32%,rgba(1,20,167,.45) 50%,transparent 68%);transform:rotate(-14deg) scaleY(1.5);filter:blur(42px)}
   .bg::after{background:linear-gradient(180deg,transparent 54%,rgba(220,228,255,.45) 65%,transparent 80%);transform:rotate(-15deg) scaleY(1.3);filter:blur(40px)}
-
   /* ---------- FX ---------- */
   .fx{position:fixed;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
   .spot{position:absolute;top:-35%;width:34vw;height:150vh;background:linear-gradient(110deg,transparent 28%,rgba(255,255,255,.28) 49%,transparent 70%);filter:blur(7px);animation:spot 3.4s ease-in-out infinite alternate}
@@ -47,7 +45,6 @@
   @keyframes spot{to{opacity:.35;filter:blur(15px)}}
   @keyframes twinkle{0%,18%{opacity:.04;transform:scale(.25) rotate(0)}70%,100%{opacity:.7;transform:translate(var(--dx),var(--dy)) scale(1.15) rotate(90deg)}}
   @keyframes fall{0%{transform:translate3d(0,-10vh,0) rotate(0)}100%{transform:translate3d(var(--dx),120vh,0) rotate(900deg)}}
-
   /* ---------- TOP BAR ---------- */
   .topbar{position:fixed;top:0;left:0;right:0;z-index:50}
   .topbar-inner{max-width:1440px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:10px;padding:clamp(14px,2.2vw,26px) clamp(16px,4vw,44px)}
@@ -61,7 +58,6 @@
   .pill.warm{background:#FFF1C9;color:#8A5A00;border-color:#FFF1C9}
   .tab{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;padding:9px 18px;border-radius:999px;font-size:14px;font-weight:800;transition:.2s var(--ease)}
   .tab.on,.tab:hover{background:#fff;color:var(--primary)}
-
   /* ---------- LAYOUT ---------- */
   .page{min-height:100vh;display:flex;flex-direction:column;align-items:center;padding:clamp(76px,10vh,110px) clamp(16px,4vw,44px) 40px}
   .page.center{justify-content:center;text-align:center}
@@ -80,7 +76,6 @@
   @keyframes pop{0%{opacity:0;transform:scale(.1) rotate(-12deg)}65%{opacity:1;transform:scale(1.18) rotate(3deg)}100%{opacity:1;transform:none}}
   .enter{animation:contentIn .8s cubic-bezier(.16,.9,.22,1.12) both}
   .pop{animation:pop .7s cubic-bezier(.12,.9,.2,1.25) both}
-
   /* ---------- PANEL / CARD ---------- */
   .panel{background:rgba(255,255,255,.97);border-radius:clamp(26px,3vw,40px);padding:clamp(22px,3.4vw,44px);color:var(--ink);box-shadow:0 34px 90px -34px rgba(1,10,90,.72)}
   .panel + .panel{margin-top:16px}
@@ -88,7 +83,6 @@
   .input{width:100%;height:64px;padding:0 20px;border:2px solid var(--g1);border-radius:18px;background:var(--g3);font-size:20px;font-weight:800;color:var(--ink);outline:none;text-align:center;transition:.2s var(--ease)}
   .input:focus{border-color:var(--secondary);background:#fff}
   .msg{color:var(--ng);font-size:14px;font-weight:700;min-height:20px;margin-top:8px}
-
   /* ---------- CTA ---------- */
   .cta{position:relative;overflow:hidden;width:100%;min-height:clamp(64px,8vh,92px);padding:16px 30px;border-radius:20px;background:#fff;color:var(--primary);
     font-weight:900;font-size:clamp(21px,2.4vw,32px);display:inline-flex;align-items:center;justify-content:center;gap:10px;
@@ -106,7 +100,6 @@
   .cta.danger:hover:not(:disabled){background:#8B1E32;color:#fff}
   @keyframes shine{0%,22%{left:-35%}70%,100%{left:125%}}
   @keyframes ctaFloat{to{transform:translateY(-6px);box-shadow:0 30px 60px -20px rgba(1,10,90,.8)}}
-
   /* ---------- TIMER RING ---------- */
   .ring{position:relative;width:var(--rs,120px);height:var(--rs,120px);flex-shrink:0}
   .ring svg{width:100%;height:100%;transform:rotate(-90deg)}
@@ -117,7 +110,6 @@
   .ring.danger .prog{stroke:#FF6B81}
   .ring.danger .num{color:#FFD2DA;animation:panic .6s ease-in-out infinite alternate}
   @keyframes panic{to{transform:scale(1.15)}}
-
   /* ---------- QUESTION ---------- */
   .qhead{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:16px}
   .qtext{font-size:clamp(22px,2.6vw,46px);font-weight:900;line-height:1.38;word-break:keep-all;color:var(--ink)}
@@ -133,7 +125,6 @@
   .opt:disabled{opacity:.5}
   .no{flex-shrink:0;width:38px;height:38px;border-radius:12px;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px}
   .opt:nth-child(2) .no{background:var(--secondary)} .opt:nth-child(3) .no{background:#2848DF} .opt:nth-child(4) .no{background:#6E84FF}
-
   /* host big */
   .hq-wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
   .hopts{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px}
@@ -153,13 +144,11 @@
   .stat b{color:var(--primary)}
   .explain{margin-top:16px;padding:18px 22px;border-radius:20px;background:var(--g3);border:1px solid var(--g1);font-size:clamp(16px,1.8vw,24px);font-weight:700;line-height:1.5;color:var(--ink-body)}
   .explain b{color:var(--secondary)}
-
   /* ---------- RESULT ---------- */
   .big-emoji{font-size:clamp(64px,10vw,110px);line-height:1}
   .result-title{font-size:clamp(42px,7vw,86px);font-weight:900;color:#fff;text-shadow:0 0 18px rgba(255,255,255,.7),0 14px 40px rgba(1,20,120,.45)}
   .point-pill{display:inline-block;margin-top:14px;padding:12px 28px;border-radius:999px;background:#fff;color:var(--primary);font-size:clamp(24px,4vw,40px);font-weight:900;box-shadow:0 18px 44px -18px rgba(1,10,90,.7)}
   .point-pill.ng{color:var(--ng)}
-
   /* ---------- RANKING ---------- */
   .rank-list{display:flex;flex-direction:column;gap:10px;width:100%}
   .rank-row{display:grid;grid-template-columns:56px 1fr auto;align-items:center;gap:12px;padding:14px 20px;border-radius:20px;background:#fff;color:var(--ink);
@@ -172,7 +161,6 @@
   .rank-row.rank2{background:linear-gradient(135deg,var(--silver1),var(--silver2));font-size:clamp(19px,2.2vw,29px)}
   .rank-row.rank3{background:linear-gradient(135deg,var(--bronze1),var(--bronze2));font-size:clamp(18px,2vw,28px)}
   .rank-row.rank1 .r,.rank-row.rank2 .r,.rank-row.rank3 .r{font-size:1.3em}
-
   .podium{display:flex;align-items:flex-end;justify-content:center;gap:clamp(12px,2vw,26px);margin:26px 0 8px;min-height:clamp(320px,48vh,470px)}
   .pcol{width:clamp(180px,22vw,290px);display:flex;flex-direction:column;align-items:center}
   .pcard{width:100%;padding:18px 14px;margin-bottom:14px;border-radius:26px;background:#fff;text-align:center;box-shadow:0 26px 60px -24px rgba(1,10,90,.75)}
@@ -185,7 +173,6 @@
   .p1 .pbar{height:clamp(170px,24vh,250px);background:linear-gradient(180deg,var(--gold2),#F2C94C)}
   .p2 .pbar{height:clamp(120px,17vh,180px);background:linear-gradient(180deg,#EEF2F8,var(--silver2))}
   .p3 .pbar{height:clamp(90px,12vh,135px);background:linear-gradient(180deg,var(--bronze2),#D99B64)}
-
   /* ---------- LOBBY ---------- */
   .lobby{display:grid;grid-template-columns:auto 1fr;gap:clamp(24px,4vw,56px);align-items:center;width:100%}
   .qr{padding:18px;border-radius:32px;background:#fff;box-shadow:0 34px 90px -34px rgba(1,10,90,.75)}
@@ -195,7 +182,6 @@
   .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;max-height:34vh;overflow:auto}
   .chip{background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);backdrop-filter:blur(10px);padding:8px 16px;border-radius:999px;font-size:clamp(14px,1.3vw,18px);font-weight:800;color:#fff}
   .chip.off{opacity:.45}
-
   /* ---------- HOST ACTION BAR ---------- */
   .actions{width:100%;max-width:1280px;margin-top:22px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
   .subactions{width:100%;max-width:1280px;margin-top:14px;display:flex;justify-content:flex-end;gap:10px}
@@ -203,7 +189,6 @@
   .ghost:hover{background:#fff;color:var(--primary)}
   .ghost.red{background:#B42335;border-color:#B42335}
   .ghost.red:hover{background:#7F1424;color:#fff}
-
   /* ---------- EDITOR ---------- */
   .esec h2{font-size:clamp(22px,2.4vw,30px);font-weight:900;color:var(--ink);margin-bottom:14px}
   .esec h2 small{font-size:.6em;color:var(--ink-mute)}
@@ -224,7 +209,6 @@
   .dirty{color:#FFD166;font-weight:800}
   .clean{color:rgba(255,255,255,.75);font-weight:700}
   .warnbox{margin-bottom:14px;padding:14px 20px;border-radius:18px;background:#FFF1C9;color:#8A5A00;font-weight:800}
-
   /* ---------- IMAGES ---------- */
   .qimg{display:block;width:auto;max-width:100%;margin-left:auto;margin-right:auto;height:auto;max-height:48vh;object-fit:contain;border-radius:20px;background:var(--g2);margin-bottom:16px}
   .zoom{cursor:zoom-in}
@@ -254,13 +238,16 @@
   .thumb img{width:100%;height:100%;object-fit:contain;display:block}
   .thumb.sm{width:56px;height:42px;border-radius:8px}
   .sizeinfo{color:rgba(255,255,255,.8);font-weight:700;font-size:14px}
-
+  /* ---------- SOUND TOGGLE ---------- */
+  .sound-fab{position:fixed;left:16px;bottom:16px;z-index:80;width:46px;height:46px;border-radius:50%;
+    background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.4);color:#fff;font-size:20px;
+    backdrop-filter:blur(10px);box-shadow:0 10px 26px -12px rgba(1,10,90,.6);transition:.2s var(--ease)}
+  .sound-fab:hover{background:#fff}
   /* ---------- MISC ---------- */
   .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:13px 20px;border-radius:14px;font-size:15px;font-weight:700;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none}
   .toast.show{opacity:1}
   .spinner{width:44px;height:44px;border:5px solid rgba(255,255,255,.35);border-top-color:#fff;border-radius:50%;animation:sp 1s linear infinite}
   @keyframes sp{to{transform:rotate(360deg)}}
-
   @media (max-width:760px){
     .hq-wrap{grid-template-columns:1fr}
     .hopts{grid-template-columns:1fr}
@@ -286,7 +273,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/12.19.0/firebase-app.js";
 import { getDatabase, ref, onValue, set, update, push, runTransaction, serverTimestamp, onDisconnect, increment }
   from "https://www.gstatic.com/firebasejs/12.19.0/firebase-database.js";
-
 /* ============ 1. Firebase 설정 ============ */
 const firebaseConfig = {
   apiKey: "AIzaSyA4gpSIcaFMLe-uLvUsIMOcSGwsrIw4TXk",
@@ -297,7 +283,6 @@ const firebaseConfig = {
   messagingSenderId: "986724884810",
   appId: "1:986724884810:web:6c3f082d36f6ad14a061b3"
 };
-
 /* ============ 2. 기본 설정 (문구는 여기서 수정) ============ */
 const KICKER     = "2026년 10월 전략실 커넥트데이";
 const TITLE_SUB  = "전략실 구성원";
@@ -309,7 +294,6 @@ const BASE_POINT = 500;   // 정답 기본 점수
 const SPEED_POINT = 500;  // 빨리 맞힐수록 추가되는 최대 점수
 const NICK_MAX = 10;
 const DEFAULT_TIME = 15; // 기본 제한시간(초)
-
 // 최초 1회만 사용되는 예시 문제입니다. 실제 문제는 진행자 화면 > [문제 편집]에서 수정하세요.
 const DEFAULT_QUESTIONS = {
   practice: [
@@ -320,7 +304,6 @@ const DEFAULT_QUESTIONS = {
     type:"mc", text:`본 문제 ${i+1} (예시 - 문제 편집에서 수정하세요)`, options:["보기 1","보기 2","보기 3","보기 4"], answer:0, time:DEFAULT_TIME, explain:""
   }))
 };
-
 /* ============ 3. 공통 ============ */
 const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
@@ -340,7 +323,6 @@ const hasOptImg = q => q && q.type !== "short" && toArr(q.optImages).some(Boolea
 const optImg = (q,i) => toArr(q.optImages)[i] || "";
 /* 해설 사진: 따로 넣은 사진이 있으면 그 사진, 없으면 정답 보기 사진 */
 const revealImg = q => q.explainImage || (q.type !== "short" ? optImg(q, Number(q.answer)) : "");
-
 /* 사진 확대 보기 */
 document.addEventListener("click", e => {
   const z = e.target.closest(".zoom"); if(!z) return;
@@ -370,6 +352,157 @@ function pickImage(max, cb){
 }
 function toast(t){ const el=document.getElementById("toast"); el.textContent=t; el.classList.add("show"); clearTimeout(toast._t); toast._t=setTimeout(()=>el.classList.remove("show"),2200); }
 
+/* ============ 사운드 (외부 파일 없이 코드로 생성하는 효과음 + 배경음악) ============ */
+let actx = null, masterGain = null, sfxGain = null, musicGain = null;
+let soundOn = localStorage.getItem("cdq_sound") !== "0";
+function ensureAudio(){
+  if(!actx){
+    actx = new (window.AudioContext || window.webkitAudioContext)();
+    masterGain = actx.createGain(); masterGain.gain.value = soundOn ? 1 : 0; masterGain.connect(actx.destination);
+    sfxGain = actx.createGain(); sfxGain.gain.value = 0.9; sfxGain.connect(masterGain);
+    musicGain = actx.createGain(); musicGain.gain.value = 0.32; musicGain.connect(masterGain);
+  }
+  if(actx.state === "suspended") actx.resume().catch(()=>{});
+  return actx;
+}
+function tone(dest, freq, t0, dur, type, peak, attack){
+  const o = actx.createOscillator(), g = actx.createGain();
+  o.type = type || "sine"; o.frequency.setValueAtTime(freq, t0);
+  g.gain.setValueAtTime(0, t0);
+  g.gain.linearRampToValueAtTime(peak ?? 0.22, t0 + (attack ?? 0.012));
+  g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+  o.connect(g); g.connect(dest);
+  o.start(t0); o.stop(t0 + dur + 0.03);
+}
+function noiseBurst(dest, t0, dur, peak, freq){
+  const n = Math.max(1, Math.floor(actx.sampleRate * dur));
+  const buf = actx.createBuffer(1, n, actx.sampleRate);
+  const d = buf.getChannelData(0);
+  for(let i=0;i<n;i++) d[i] = (Math.random()*2-1) * (1 - i/n);
+  const src = actx.createBufferSource(); src.buffer = buf;
+  const filt = actx.createBiquadFilter(); filt.type = "bandpass"; filt.frequency.value = freq || 1400;
+  const g = actx.createGain(); g.gain.setValueAtTime(peak ?? 0.22, t0);
+  g.gain.exponentialRampToValueAtTime(0.0001, t0 + dur);
+  src.connect(filt); filt.connect(g); g.connect(dest);
+  src.start(t0); src.stop(t0 + dur + 0.03);
+}
+/* --- 효과음 --- */
+function sfxCorrect(){ if(!soundOn) return; ensureAudio(); const t = actx.currentTime;
+  [523.25,659.25,783.99,1046.50].forEach((f,i) => tone(sfxGain, f, t + i*0.075, 0.5, "triangle", 0.22)); }
+function sfxWrong(){ if(!soundOn) return; ensureAudio(); const t = actx.currentTime;
+  tone(sfxGain, 207.65, t, 0.4, "sawtooth", 0.18); tone(sfxGain, 155.56, t + 0.11, 0.45, "sawtooth", 0.16); }
+function sfxTick(urgent){ if(!soundOn) return; ensureAudio();
+  tone(sfxGain, urgent ? 1450 : 1000, actx.currentTime, urgent ? 0.09 : 0.06, "square", urgent ? 0.12 : 0.06, 0.001); }
+function sfxDing(){ if(!soundOn) return; ensureAudio(); const t = actx.currentTime;
+  tone(sfxGain, 880, t, 0.5, "sine", 0.2); tone(sfxGain, 1318.5, t + 0.07, 0.55, "sine", 0.14); }
+function sfxDrum(){ if(!soundOn) return; ensureAudio(); const t = actx.currentTime;
+  for(let i=0;i<7;i++) noiseBurst(sfxGain, t + i*0.085, 0.09, 0.12 + i*0.018); }
+function sfxFanfare(){ if(!soundOn) return; ensureAudio(); const t = actx.currentTime;
+  [[523.25,659.25,783.99],[659.25,783.99,987.77],[783.99,987.77,1174.66,1567.98]].forEach((chord,i) =>
+    chord.forEach(f => tone(sfxGain, f, t + i*0.24, 1.0, "triangle", 0.15))); }
+
+/* --- 배경음악 ---
+   calm : 대기실·준비·중간순위 화면 — 잔잔한 코드 패드
+   quiz : 연습/본 문제 풀이 화면 — 경쾌한 퀴즈쇼 비트 (베이스 + 아르페지오 + 하이햇)
+   drum : 최종 순위 발표(1등 공개 전) — 두구두구 북소리 롤 */
+const CALM_CHORDS = [[261.63,329.63,392.00,493.88],[220.00,261.63,329.63,392.00],[174.61,220.00,261.63,349.23],[196.00,246.94,293.66,392.00]];
+const QUIZ_BARS = [ // [베이스, 아르페지오 음]
+  [130.81,[523.25,659.25,783.99,659.25]],   // C
+  [110.00,[440.00,523.25,659.25,523.25]],   // Am
+  [87.31, [349.23,440.00,523.25,440.00]],   // F
+  [98.00, [392.00,493.88,587.33,493.88]]    // G
+];
+const QUIZ_BEAT = 0.25; // 8분음표 길이(초) → 120BPM
+let bgmMode = null, bgmTimer = null, bgmIdx = 0, bgmNext = 0;
+function calmStep(){
+  const t = actx.currentTime, dur = 3.6;
+  CALM_CHORDS[bgmIdx % CALM_CHORDS.length].forEach(f => tone(musicGain, f, t, dur, "sine", 0.05, 0.7));
+  bgmIdx++;
+  bgmTimer = setTimeout(calmStep, (dur - 0.25) * 1000);
+}
+function quizStep(){
+  // 한 마디(8개 8분음표 = 2초)를 미리 예약하고, 다음 마디 직전에 다시 호출
+  const t0 = Math.max(bgmNext, actx.currentTime + 0.05);
+  const [bass, arp] = QUIZ_BARS[bgmIdx % QUIZ_BARS.length];
+  for(let i=0;i<8;i++){
+    const t = t0 + i*QUIZ_BEAT;
+    if(i % 2 === 0) tone(musicGain, bass, t, QUIZ_BEAT*1.8, "triangle", 0.11, 0.005);   // 베이스(4분음표)
+    tone(musicGain, arp[i % 4], t, QUIZ_BEAT*0.9, "square", 0.022, 0.004);              // 아르페지오
+    noiseBurst(musicGain, t + QUIZ_BEAT/2, 0.03, i % 2 ? 0.05 : 0.03, 7000);           // 하이햇(엇박)
+  }
+  bgmIdx++;
+  bgmNext = t0 + 8*QUIZ_BEAT;
+  bgmTimer = setTimeout(quizStep, Math.max(50, (bgmNext - actx.currentTime - 0.3) * 1000));
+}
+function drumLoopStep(){
+  // 1등 공개 전: 긴장감 있는 북 롤이 점점 빨라지며 반복됨
+  const t0 = Math.max(bgmNext, actx.currentTime + 0.05);
+  const cycle = 1.05, n = 11;
+  for(let i=0;i<n;i++){
+    const t = t0 + i*(cycle/n);
+    noiseBurst(musicGain, t, (cycle/n)*0.85, 0.045 + (i/n)*0.055, 2000);
+  }
+  tone(musicGain, 110, t0 + cycle - 0.05, 0.18, "sine", 0.09, 0.004); // 낮은 액센트
+  bgmIdx++;
+  bgmNext = t0 + cycle;
+  bgmTimer = setTimeout(drumLoopStep, Math.max(50, (bgmNext - actx.currentTime - 0.3) * 1000));
+}
+function playBgm(){
+  clearTimeout(bgmTimer); bgmTimer = null;
+  if(!bgmMode || !soundOn || !actx) return;
+  bgmIdx = 0; bgmNext = 0;
+  if(bgmMode === "quiz") quizStep();
+  else if(bgmMode === "drum") drumLoopStep();
+  else calmStep();
+}
+/* 화면이 바뀔 때 이미 예약된 배경음 음표까지 즉시(0.15초 페이드) 끊어서 효과음과 겹치지 않게 함 */
+function cutMusic(){
+  if(!actx || !musicGain) return;
+  const old = musicGain, t = actx.currentTime;
+  old.gain.cancelScheduledValues(t); old.gain.setValueAtTime(old.gain.value, t);
+  old.gain.linearRampToValueAtTime(0, t + 0.15);
+  setTimeout(() => { try{ old.disconnect(); }catch(e){} }, 300);
+  musicGain = actx.createGain(); musicGain.gain.value = 0.32; musicGain.connect(masterGain);
+}
+function setBgm(mode){
+  if(mode === bgmMode && (bgmTimer || !soundOn || !actx)) return;
+  if(mode !== bgmMode) cutMusic();
+  bgmMode = mode;
+  playBgm();
+}
+function toggleSound(){
+  soundOn = !soundOn; localStorage.setItem("cdq_sound", soundOn ? "1" : "0");
+  ensureAudio(); masterGain.gain.value = soundOn ? 1 : 0;
+  if(soundOn) playBgm(); else { clearTimeout(bgmTimer); bgmTimer = null; }
+  const btn = document.getElementById("soundBtn"); if(btn) btn.textContent = soundOn ? "🔊" : "🔇";
+}
+const soundBtn = document.createElement("button");
+soundBtn.id = "soundBtn"; soundBtn.className = "sound-fab"; soundBtn.type = "button";
+soundBtn.textContent = soundOn ? "🔊" : "🔇";
+soundBtn.onclick = () => { ensureAudio(); toggleSound(); };
+document.body.appendChild(soundBtn);
+/* 첫 터치 때 오디오 잠금 해제 + 현재 화면 배경음 시작 */
+document.addEventListener("pointerdown", () => { const first = !actx; ensureAudio(); if(first || !bgmTimer) playBgm(); }, { passive:true });
+
+let sfxSig = "";
+function handleAudioSideEffects(){
+  const ph = S.phase || "lobby";
+  if(["lobby","ready","board"].includes(ph)) setBgm("calm");
+  else if(ph === "question") setBgm("quiz");
+  else if(ph === "final" && (S.step||0) < 3) setBgm("drum");   // 1등 공개 전까지 두구두구 롤 반복
+  else setBgm(null); // 정답 공개·1등 공개 이후는 효과음만
+  const key = `${ph}|${S.round||""}|${S.index||0}|${S.step||0}`;
+  const prevKey = sfxSig; sfxSig = key;
+  if(!prevKey || key === prevKey) return; // 최초 로드 시에는 효과음 재생 안 함
+  if(ph === "reveal"){
+    if(isHost) sfxDing();
+    else{ const ans = myAnswer(); (ans && ans.correct) ? sfxCorrect() : sfxWrong(); }
+  }else if(ph === "final"){
+    const st = S.step || 0;
+    if(st === 1 || st === 2) sfxDrum();      // 3등·2등 공개 강조음 (롤 위에 겹쳐짐)
+    else if(st === 3) sfxFanfare();          // 1등 공개 팡파레
+  }
+}
 /* 배경 효과 */
 let fxMode = "";
 function setFx(mode){
@@ -388,21 +521,18 @@ function ringHTML(size){
   return `<div class="ring" data-ring style="--rs:${size}px"><svg viewBox="0 0 120 120"><circle class="track" cx="60" cy="60" r="52"></circle>
     <circle class="prog" data-prog cx="60" cy="60" r="52" stroke-dasharray="326.7" stroke-dashoffset="0"></circle></svg><div class="num" data-num></div></div>`;
 }
-
 let S = { phase:"lobby" };
 let qVer = 0;
 let Q = null;
 let P = {};
 let A = {};
 const loaded = { state:false, q:false, p:false };
-
 const listOf = round => round === "main" ? (Q?.main || []) : (Q?.practice || []);
 const curQ = () => listOf(S.round)[S.index];
 const qKey = () => `${S.round}_${S.index}`;
 /* 접속 여부: 기기(탭)별 연결 기록이 하나라도 있으면 접속 중 */
 const isOnline = p => !!(p && p.conns && Object.keys(p.conns).length);
 const onlineCount = () => Object.values(P).filter(p => p && p.nick && isOnline(p)).length;
-
 function ranking(){
   return Object.entries(P).filter(([,p]) => p && p.nick)
     .map(([id,p]) => ({ id, nick:p.nick, score:p.score||0, time:p.totalTime||0, online:isOnline(p) }))
@@ -422,7 +552,6 @@ function rankList(r, limit, meId){
       <span class="s">${x.score.toLocaleString()}점</span>
     </div>`).join("")}</div>`;
 }
-
 /* ============ 4. 실시간 구독 ============ */
 let aUnsub = null, aKey = null;
 function subAnswers(){
@@ -440,11 +569,9 @@ onValue(ref(db, "questions"), s => {
   loaded.q = true; render();
 });
 onValue(ref(db, "players"), s => { P = s.val() || {}; loaded.p = true; checkPresence(); render(); });
-
 /* ============ 5. 참가자 ============ */
 let myId = localStorage.getItem("cdq_pid");
 let presenceOn = false, localAns = null, submitting = false;
-
 let connected = false, myConnKey = null;
 if(!isHost) onValue(ref(db, ".info/connected"), s => { connected = s.val() === true; if(!connected) myConnKey = null; checkPresence(); });
 function checkPresence(){
@@ -478,7 +605,6 @@ async function join(){
     msg.textContent = "접속 오류가 발생했어요. 네트워크(LTE/5G)를 확인해 주세요."; btn.disabled = false; console.error(e);
   }
 }
-
 async function submit(val){
   if(submitting || S.phase !== "question") return;
   const q = curQ(); if(!q) return;
@@ -503,7 +629,6 @@ async function submit(val){
   }catch(e){ console.error(e); toast("제출 오류! 다시 시도해 주세요."); localAns = null; }
   submitting = false; render(true);
 }
-
 function myAnswer(){
   if(A[myId]) return A[myId];
   if(localAns && localAns.key === qKey()) return localAns;
@@ -513,7 +638,6 @@ function myRank(){
   const r = ranking(); const i = r.findIndex(x => x.id === myId);
   return i < 0 ? null : { rank:i+1, total:r.length, score:r[i].score };
 }
-
 let lastSig = "";
 function renderPlayer(force){
   if(!loaded.state || !loaded.p) return;
@@ -524,7 +648,6 @@ function renderPlayer(force){
     ["reveal","board","final","ready"].includes(S.phase) ? [mr?.rank,mr?.score] : 0, !!Q, P[myId]?.score]);
   if(!force && sig === lastSig) return;
   lastSig = sig;
-
   if(!joined){
     setFx("sparkle");
     $top.innerHTML = "";
@@ -538,18 +661,16 @@ function renderPlayer(force){
         <div id="nickmsg" class="msg"></div>
         <button id="joinbtn" class="cta blue shine" style="margin-top:6px">입장하기</button>
       </div></div></div>`;
-    document.getElementById("joinbtn").onclick = join;
+    document.getElementById("joinbtn").onclick = () => { ensureAudio(); join(); };
     document.getElementById("nick").onkeydown = e => { if(e.key === "Enter") join(); };
     return;
   }
-
   const me = P[myId];
   $top.innerHTML = `<span class="pill"><span class="dot"></span>${esc(me.nick)}</span>
     ${S.round==="main" && !["lobby","ready"].includes(S.phase||"lobby") ? `<span class="pill white">${(me.score||0).toLocaleString()}점</span>` : ""}`;
   let body = "";
   const q = curQ();
   const ph = S.phase || "lobby";
-
   if(ph === "lobby"){
     setFx("sparkle");
     body = `<div class="page center"><div class="narrow enter">
@@ -644,7 +765,6 @@ function renderPlayer(force){
     body = `<div class="page center"><div class="spinner"></div><p class="muted" style="margin-top:14px">잠시만 기다려 주세요...</p></div>`;
   }
   $app.innerHTML = body;
-
   $app.querySelectorAll(".opt").forEach(b => b.onclick = () => submit(Number(b.dataset.i)));
   const sa = document.getElementById("sa");
   if(sa){
@@ -653,13 +773,11 @@ function renderPlayer(force){
   }
   tick();
 }
-
 /* ============ 6. 진행자 ============ */
 let hostOK = sessionStorage.getItem("cdq_host") === "1";
 let tab = "run";
 let draft = null, dirty = false;
 let autoRevealed = "";
-
 async function sha256(t){
   const b = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(t));
   return [...new Uint8Array(b)].map(x => x.toString(16).padStart(2,"0")).join("");
@@ -672,7 +790,6 @@ async function checkPin(){
     render(true);
   }else document.getElementById("pinmsg").textContent = "PIN이 올바르지 않습니다.";
 }
-
 async function startQ(round, index){
   const q = listOf(round)[index];
   if(!q){ toast("문제가 없습니다. 문제 편집에서 추가해 주세요."); return; }
@@ -694,7 +811,6 @@ async function resetAll(){
   await update(ref(db), { players:null, nicks:null, answers:null, state:{ phase:"lobby" } });
   toast("초기화했습니다.");
 }
-
 function nextActions(){
   const pLen = listOf("practice").length, mLen = listOf("main").length;
   const ph = S.phase || "lobby";
@@ -726,7 +842,6 @@ function nextActions(){
   }
   return b;
 }
-
 function hostTop(){
   $top.innerHTML = `<span class="pill"><span class="dot"></span>참가자 ${ranking().length}명${ranking().length - onlineCount() > 0 ? ` (연결 끊김 ${ranking().length - onlineCount()}명)` : ""}</span>
     <button class="tab ${tab==="run"?"on":""}" id="t-run">퀴즈 진행</button>
@@ -734,7 +849,6 @@ function hostTop(){
   document.getElementById("t-run").onclick = () => { if(tab==="run") return; tab = "run"; lastSig=""; render(true); };
   document.getElementById("t-edit").onclick = () => { if(tab==="edit") return; tab = "edit"; if(!dirty) draft = JSON.parse(JSON.stringify(Q || DEFAULT_QUESTIONS)); render(true); };
 }
-
 function renderHost(force){
   if(!hostOK){
     if(!force && lastSig === "pin") return; lastSig = "pin";
@@ -746,13 +860,12 @@ function renderHost(force){
         <input id="pin" type="password" class="input" placeholder="진행자 PIN">
         <div id="pinmsg" class="msg"></div>
         <button id="pinbtn" class="cta blue">입장</button></div></div></div>`;
-    document.getElementById("pinbtn").onclick = checkPin;
+    document.getElementById("pinbtn").onclick = () => { ensureAudio(); checkPin(); };
     document.getElementById("pin").onkeydown = e => { if(e.key === "Enter") checkPin(); };
     return;
   }
   if(!loaded.state || !loaded.q || !loaded.p) return;
   if(tab === "edit"){ hostTop(); if(force) renderEditor(); return; }
-
   const q = curQ();
   const ph0 = S.phase || "lobby";
   const sig = JSON.stringify([S, qVer,
@@ -767,10 +880,8 @@ function renderHost(force){
   }
   lastSig = sig;
   hostTop();
-
   let main = "";
   const ph = S.phase || "lobby";
-
   if(ph === "lobby"){
     setFx("sparkle");
     const url = location.origin + location.pathname;
@@ -848,29 +959,25 @@ function renderHost(force){
           <div class="pscore">${shown && x ? x.score.toLocaleString()+"점" : "&nbsp;"}</div></div>
         <div class="pbar">${n}</div></div>`;
     };
-    main = `<div style="text-align:center"><p class="kicker" style="margin-bottom:6px">${esc(TITLE_SUB)} ${esc(TITLE_MAIN)} ${esc(TITLE_TAIL)}</p><h1 class="hero-title" style="font-size:clamp(44px,6vw,90px)">🏆 최종 순위</h1></div>
+    main = `<div style="text-align:center"><p class="kicker" style="margin-bottom:6px">${esc(TITLE_SUB)} 친해지길 바라 퀴즈 퀴즈!</p><h1 class="hero-title" style="font-size:clamp(44px,6vw,90px)">🏆 최종 순위</h1></div>
       ${st < 4 ? `<div class="podium">${col(2)}${col(1)}${col(3)}</div>`
                : `<div style="max-width:880px;margin:26px auto 0">${rankList(r, 999)}</div>`}`;
   }
   else{
     main = `<div class="panel">문제가 없습니다. [문제 편집]에서 문제를 확인해 주세요.</div>`;
   }
-
   const acts = nextActions();
   $app.innerHTML = `<div class="page"><div class="wide">${main}</div>
     <div class="actions">${acts.map((a,i) => `<button class="cta ${a[2]||""}" data-a="${i}">${a[0]}</button>`).join("")}</div>
     <div class="subactions"><button class="ghost" id="b-lobby">대기실로</button><button class="ghost red" id="b-reset">전체 초기화</button></div></div>`;
-
   $app.querySelectorAll("[data-a]").forEach(b => b.onclick = async () => { b.disabled = true; try{ await acts[Number(b.dataset.a)][1](); }catch(e){ console.error(e); toast("오류가 발생했습니다."); b.disabled = false; } });
   document.getElementById("b-lobby").onclick = toLobby;
   document.getElementById("b-reset").onclick = resetAll;
   tick();
 }
-
 /* ============ 7. 문제 편집기 ============ */
 function blankQ(type){ return type === "short" ? { type:"short", text:"", answers:[""], time:DEFAULT_TIME, explain:"" }
                                             : { type:"mc", text:"", options:["","","",""], answer:0, time:DEFAULT_TIME, explain:"" }; }
-
 function renderEditor(){
   setFx("");
   if(!draft) draft = JSON.parse(JSON.stringify(Q || DEFAULT_QUESTIONS));
@@ -917,7 +1024,6 @@ function renderEditor(){
     <button class="sbtn blue" data-act="add" data-s="${key}" data-t="mc">+ 선다형 추가</button>
     <button class="sbtn blue" data-act="add" data-s="${key}" data-t="short">+ 주관식 추가</button>
     <button class="sbtn" data-act="alltime" data-s="${key}">⏱ 이 영역 전체 ${DEFAULT_TIME}초로 맞추기</button></div>`;
-
   const running = ["question","reveal","board"].includes(S.phase);
   $app.innerHTML = `<div class="page"><div class="wide" style="max-width:1000px">
     <div style="margin-bottom:18px"><p class="kicker" style="margin-bottom:6px">진행자 전용</p><h2 class="h2">✏️ 문제 편집</h2></div>
@@ -929,10 +1035,8 @@ function renderEditor(){
       <div style="display:flex;gap:8px;margin-top:8px"><button class="sbtn" id="j-out">현재 편집 내용 내보내기</button><button class="sbtn blue" id="j-in">붙여넣은 JSON 불러오기</button></div></div>
     <div class="savebar"><button class="cta shine" id="e-save">💾 저장 (즉시 반영)</button>
       <button class="ghost" id="e-reload">저장된 내용 다시 불러오기</button>
-      <span id="dirty" class="${dirty ? "dirty" : "clean"}">${dirty ? "● 저장하지 않은 변경사항이 있습니다" : "저장된 상태"}</span>
-      <span class="sizeinfo" style="margin-left:auto">사진 포함 용량 약 ${(JSON.stringify(draft).length/1048576).toFixed(1)}MB</span></div>
+      <span id="dirty" class="${dirty ? "dirty" : "clean"}">${dirty ? "● 저장하지 않은 변경사항이 있습니다" : "저장된 상태"}</span></div>
   </div></div>`;
-
   const markDirty = () => { dirty = true; const d = document.getElementById("dirty"); d.className = "dirty"; d.textContent = "● 저장하지 않은 변경사항이 있습니다"; };
   $app.querySelectorAll("[data-f]").forEach(el => {
     const h = () => {
@@ -976,7 +1080,6 @@ function renderEditor(){
     }catch(e){ toast("JSON 형식이 올바르지 않습니다."); }
   };
 }
-
 async function saveDraft(){
   const errs = [];
   const clean = {};
@@ -1009,12 +1112,17 @@ async function saveDraft(){
   await set(ref(db, "questions"), clean);
   dirty = false; toast("저장했습니다. 모든 화면에 즉시 반영됩니다."); renderEditor();
 }
-
 /* ============ 8. 타이머 & 렌더 ============ */
+let lastTickSecond = null;
 function tick(){
   if(S.phase !== "question" || !S.startAt) return;
   const dur = (S.duration || DEFAULT_TIME) * 1000;
   const left = Math.max(0, S.startAt + dur - now());
+  const secLeft = Math.ceil(left / 1000);
+  if(secLeft !== lastTickSecond){
+    lastTickSecond = secLeft;
+    if(secLeft > 0 && secLeft <= 5) sfxTick(secLeft <= 3);
+  }
   document.querySelectorAll("[data-ring]").forEach(r => {
     r.querySelector("[data-prog]").style.strokeDashoffset = 326.7 * (1 - left/dur);
     r.querySelector("[data-num]").textContent = Math.ceil(left/1000);
@@ -1026,10 +1134,10 @@ function tick(){
   if(!isHost && left <= 0 && !myAnswer()) $app.querySelectorAll(".opt,#sabtn").forEach(b => b.disabled = true);
 }
 setInterval(tick, 200);
-
 function render(force){
   try{ isHost ? renderHost(force) : renderPlayer(force); }
   catch(e){ console.error(e); }
+  try{ handleAudioSideEffects(); }catch(e){ console.error(e); }
 }
 </script>
 </body>
